@@ -30,7 +30,7 @@ This tutorial is a step-by-step guide that provides instructions on how to creat
 - Step 9: 
 
 
-<h2>Configuration Steps</h2>
+<h2>Step 1: </h2>
 
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
