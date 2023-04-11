@@ -53,17 +53,22 @@ This tutorial is a step-by-step guide that provides instructions on how to creat
       <li>For "Select inbound ports" use: RDP 3389.</li>
     </ol>
 
-- Note: We have successfully deployed the Domain Controller VM, which will serve as the server for our Active Directory. Remember to keep your username and password you created in your notepad, as you will need them later. Also, verify that your information is correct!
+- Note: Remember to keep your username and password you created in your notepad, as you will need them later. Also, verify that your information is correct!
 
 4. Click on the "Create" button to create the virtual machine.
-
-- Note: It should take up 1-2 minutes to process the VM
 
 <p>
 <img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 
+- Note: The processing of the VM is expected to take approximately 1-2 minutes. Once the process is complete, we will have successfully deployed the Domain Controller VM, which will act as the dedicated server for our Active Directory.
+
+
+
+
+
+    
 
 
 
