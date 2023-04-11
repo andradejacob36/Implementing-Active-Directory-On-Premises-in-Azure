@@ -34,6 +34,7 @@ This tutorial is a step-by-step guide that provides instructions on how to creat
 - Note: If you do not have an Azure account, you will need to sign up for one before you can log-in.
 2. Once you have successfully logged-in, you will be redirected to the Azure portal dashboard where you can create and manage your resources. 
 
+
 <h2>Step 2: Setup Resources in Azure</h2>
 
 1. Click on the search bar and type "Virtual Machines".
@@ -52,11 +53,17 @@ This tutorial is a step-by-step guide that provides instructions on how to creat
       <li>For "Select inbound ports" use: RDP 3389.</li>
     </ol>
 
-- Note: We have successfully deployed the Domain Controller VM, which will serve as the server for our Active Directory.
+- Note: We have successfully deployed the Domain Controller VM, which will serve as the server for our Active Directory. Remember to keep your username and password you created in your notepad, as you will need them later. Also, verify that your information is correct!
+
+4. Click on the "Create" button to create the virtual machine.
+
+- Note: It should take up 1-2 minutes to process the VM
 
 <p>
 <img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
+
+
 
 
