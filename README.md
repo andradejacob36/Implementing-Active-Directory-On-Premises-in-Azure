@@ -64,10 +64,28 @@ This tutorial is a step-by-step guide that provides instructions on how to creat
 
 - Note: The processing of the VM is expected to take approximately 1-2 minutes. Once the process is complete, we will have successfully deployed the Domain Controller VM, which will act as the dedicated server for our Active Directory.
 
+5. Create another VM. 
+      <ol type="a">
+      <li>Choose your subscription (For Ex: Azure Subscription 1).</li>
+      <li>Create a new name for the resource group (Use: AD-Lab).</li>
+      <li>Enter a unique name for the virtual machine (Use: Client-1).</li>
+      <li>For "Region" use: (US) West US 3.</li>
+      <li>For "Image" use: - Windows 10 Pro, version 21H2 (free services eligible).</li>
+      <li>For "Size" use: Standard_E2s_v3 - 2 vcpus, 16 GiB memory. </li>
+      <li>For "Username" use: labuser.</li>
+      <li>For "Password" make sure to make up one.</li>
+      <li>For "Public inbound ports" click on "Allow selected ports".</li>
+      <li>For "Select inbound ports" use: RDP 3389.</li>
+    </ol>
 
+4. Click on the "Create" button to create the virtual machine.
 
+<p>
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
 
-
+- Note: 12:00
     
 
 
