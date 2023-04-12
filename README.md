@@ -121,7 +121,7 @@ Image Display of Step 2: 7D
 
 <h2>Step 3: Ensure Connectivity between the client and Domain Controller</h2>
 
-1. Log-in to Client-1 and ping DC-1's IP address with ping -t (perpetual ping). 
+1. Log-in to Client-1 (VM) and ping DC-1's Private IP address with ping -t (perpetual ping). 
 2. Under Essentials, copy Client-1 Public IP address.
 3. Click on the "Start" button (Windows logo), then search for "Remote Desktop Connection" and open it. For Mac users download the app "Microsoft Remote Desktop" from the App Store.
 4. Paste the Public IP address(from your VM) in the computer name field and click "Connect". For Mac users paste the IP Address on "PC-name" and click "add".
@@ -182,10 +182,15 @@ Image Display of Step 2: 7D
 
 17. After minimizing the DC-1 VM, return to the Client-1 VM. You will observe that the command line on Client-1 VM responds with "Reply from ...". This is possible because we have enabled ICMPv4 communication from the DC-1 VM, allowing for the successful reply.
 
-18. Stop the ping from happening by holding CTRL + C 
+18. Stop the ping from happening by holding CTRL + C. 
 
+<h2>Step 4: Install Active Directory</h2>
 
- 
+1.
+2.
+3.
+
+22:18
 
 
 
