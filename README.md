@@ -174,12 +174,22 @@ Image Display of Step 2: 7D
 - Note: wf.msc stands for windows firewall. 
 
 14. Please select "Inbound Rules" and be sure to expand the "Inbound Rules" panel for a better view.
-
 15. Click on Protocol and find ICMPv4
 
 -Note: ICMP is used by the "ping" protocol. 
 
-16. Enable both "Private" and "Domain" of Core Networking Diagnostics - ICMP Echo Request (ICMPv4-In).
+16. To enable the "Core Networking Diagnostics - ICMP Echo Request (ICMPv4-In)" rule, right-click on it and select "Enable" for both the "Private" and "Domain" profiles.
+
+17. After minimizing the DC-1 VM, return to the Client-1 VM. You will observe that the command line on Client-1 VM responds with "Reply from ...". This is possible because we have enabled ICMPv4 communication from the DC-1 VM, allowing for the successful reply.
+
+18. Stop the ping from happening by holding CTRL + C 
+
+
+ 
+
+
+
+
 
 
 
