@@ -92,11 +92,10 @@ This tutorial is a step-by-step guide that provides instructions on how to creat
     <ol type="a">
       <li>On the search bar, type "Virtual Machines".</li>
       <li>Click the blue link "DC-1" located under "Name".</li>
-      <li>To access the networking settings, simply navigate to the "Networking" option in the settings section. From there, you can select your    network interface, which is located next to "Effective Security Rules".</li>
+      <li>Navigate to the "Networking" option in the settings section. From there, you can select your network interface.</li>
       <li>Under settings, click on "IP configurations". Click the following IP configuration:</li>
-      <li>To change the IP address assignment method from dynamic to static, go to the "Assignment" section and select the option to set the IP
-          address as static.</li>
-      <li>On the upper-left corner click "Save".  </li>
+      <li>Go to the "Assignment" section and select the option to set the IP address as static.</li>
+      <li> Then click "Save".</li>
     </ol>
 
 - Note: Changing the IP address assignment method from dynamic to static ensures that the IP address remains fixed and does not change over time.
@@ -123,8 +122,8 @@ Image Display of Step 2: 7D
 <h2>Step 3: Ensure Connectivity between the client and Domain Controller</h2>
 
 1. Log-in to Client-1 and ping DC-1's IP address with ping -t (perpetual ping). 
-2. Under Essentials, copy "Client-1" Public IP address.
-3. Navigate to the bottom-left corner and click on the "Start" button (Windows logo), then search for "Remote Desktop Connection" and open it. For Mac users download the app "remote- Microsoft Remote Desktop" from the App Store.
+2. Under Essentials, copy Client-1 Public IP address.
+3. Click on the "Start" button (Windows logo), then search for "Remote Desktop Connection" and open it. For Mac users download the app "Microsoft Remote Desktop" from the App Store.
 4. Paste the Public IP address(from your VM) in the computer name field and click "Connect". For Mac users paste the IP Address on "PC-name" and click "add".
 5. Afterwards, make sure to log-in your credentials from Step 2 (Use Username: labuser/Password: Your unique password).
 6. For Windows users click "Yes" to connect to your VM. Observe the following display. 
@@ -150,21 +149,37 @@ Image Display of Step 2: 7D
       <li>Advertising ID: No</li>
     </ol>
 9. Click "Accept"
-10. Return to Azure to find "DC-1" Private IP address and copy it. 
-11. Go back to your virtual machine (VM) in order to ping the private IP address of "DC-1". This will allow you to check the connectivity and communication between Client-1 and DC-1.    
+10. Return to Azure to find DC-1 Private IP address and copy it. 
+11. Go back to your VM in order to ping the private IP address of DC-1. 
 
     <ol type="a">
       <li>Navigate to the bottom-left corner and click on the "Start" button (Windows logo), then search for "Command Line" and open it.</li>
-      <li>On the Command Line type "ping -t "DC-1" Private IP Address.</li>
-      <li>You may observe that the Command Line is displaying "Request Time Out" as a response, which could be attributed to the Windows Firewall settings of "DC-1" blocking the incoming ping requests.</li>
+      <li>On the Command Line type "ping -t DC-1 Private IP Address.</li>
+      <li>The Command Line should display "Request Time Out" as a response, which could be attributed to the Windows Firewall settings of DC-1               blocking the incoming ping requests.</li>
       <li>Switch back to your Azure dashboard and initiate "DC-1" VM. </li>
-      <li>Under Essentials, copy "DC-1" Public IP address.</li>
-      <li>Navigate to the bottom-left corner and click on the "Start" button (Windows logo), then search for "Remote Desktop Connection" and open it.</li>
-      <li> Paste the Public IP address(from your VM) in the computer name field and click "Connect". For Mac users paste the IP Address on "PC-name" and click "add".</li>
-      <li>Afterwards, make sure to log-in your credentials from Step 2 (Use Username: labuser/Password: Your unique password).</li>
-      <li>For Windows users click "Yes" to connect to your VM. Observe the following display. </li>
-      <li></li>
     </ol>
 
+12. While DC-1 keeps blocking incoming ping request, switch back to your Azure dashboard and initiate "DC-1" VM.
+    <ol type="a">
+      <li>Under Essentials, copy DC-1 Public IP address.</li>
+      <li>Click on the "Start" button (Windows logo), then search for "Remote Desktop Connection" and open it.</li>
+      <li>Paste the Public IP address(from DC-1) in the computer name field and click "Connect".</li>
+      <li>Afterwards, make sure to log-in your credentials from Step 2 (Use Username: labuser/Password: Your unique password).</li>
+    </ol>
 
-19:37
+- Note: Now you have two active Virtual Machines, Client-1 and DC-1.
+
+13. On DC-1 (VM), navigate to the bottom-left corner and click on the Windows logo, then search for "wf.msc" and open it.
+
+- Note: wf.msc stands for windows firewall. 
+
+14. Please select "Inbound Rules" and be sure to expand the "Inbound Rules" panel for a better view.
+
+15. Click on Protocol and find ICMPv4
+
+-Note: ICMP is used by the "ping" protocol. 
+
+16. Enable both "Private" and "Domain" of Core Networking Diagnostics - ICMP Echo Request (ICMPv4-In).
+
+
+
