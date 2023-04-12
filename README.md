@@ -32,6 +32,7 @@ This tutorial is a step-by-step guide that provides instructions on how to creat
 
 1. Go to the Azure Portal website (https://portal.azure.com/) and sign-in with your Azure account credentials. 
 - Note: If you do not have an Azure account, you will need to sign up for one before you can log-in.
+
 2. Once you have successfully logged-in, you will be redirected to the Azure portal dashboard where you can create and manage your resources. 
 
 
@@ -149,7 +150,7 @@ Image Display of Step 2: 7D
       <li>Advertising ID: No</li>
     </ol>
 9. Click "Accept"
-10. Return to Azure to find DC-1 Private IP address and copy it. 
+10. Return to Azure to find "DC-1" Private IP address and copy it. 
 11. Go back to your virtual machine (VM) in order to ping the private IP address of "DC-1". This will allow you to check the connectivity and communication between Client-1 and DC-1.    
 
     <ol type="a">
