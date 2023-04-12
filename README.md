@@ -122,7 +122,7 @@ Image Display of Step 2: 7D
 
 <h2>Step 3: Ensure Connectivity between the client and Domain Controller</h2>
 
-1. Login to Client-1 and ping DC-1's IP address with ping -t (perpetual ping). 
+1. Log-in to Client-1 and ping DC-1's IP address with ping -t (perpetual ping). 
 2. Under Essentials, copy "Client-1" Public IP address.
 3. Navigate to the bottom-left corner and click on the "Start" button (Windows logo), then search for "Remote Desktop Connection" and open it. For Mac users download the app "remote- Microsoft Remote Desktop" from the App Store.
 4. Paste the Public IP address(from your VM) in the computer name field and click "Connect". For Mac users paste the IP Address on "PC-name" and click "add".
@@ -154,10 +154,17 @@ Image Display of Step 2: 7D
 11. Go back to your virtual machine (VM) in order to ping the private IP address of "DC-1". This will allow you to check the connectivity and communication between Client-1 and DC-1.    
 
     <ol type="a">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>Navigate to the bottom-left corner and click on the "Start" button (Windows logo), then search for "Command Line" and open it.</li>
+      <li>On the Command Line type "ping -t "DC-1" Private IP Address.</li>
+      <li>You may observe that the Command Line is displaying "Request Time Out" as a response, which could be attributed to the Windows Firewall settings of "DC-1" blocking the incoming ping requests.</li>
+      <li>Switch back to your Azure dashboard and initiate "DC-1" VM. </li>
+      <li>Under Essentials, copy "DC-1" Public IP address.</li>
+      <li>Navigate to the bottom-left corner and click on the "Start" button (Windows logo), then search for "Remote Desktop Connection" and open it.</li>
+      <li> Paste the Public IP address(from your VM) in the computer name field and click "Connect". For Mac users paste the IP Address on "PC-name" and click "add".</li>
+      <li>Afterwards, make sure to log-in your credentials from Step 2 (Use Username: labuser/Password: Your unique password).</li>
+      <li>For Windows users click "Yes" to connect to your VM. Observe the following display. </li>
       <li></li>
     </ol>
+
+
+19:37
