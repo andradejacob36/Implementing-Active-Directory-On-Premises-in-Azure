@@ -186,15 +186,41 @@ Image Display of Step 2: 7D
 
 <h2>Step 4: Install Active Directory</h2>
 
-1.
-2.
-3.
-
-22:18
+1. Log-in to DC-1 and install Active Directory Domain Services 
+2. Promote as a DC: Setup a new forest as mydomain.com
+3. Restart and then log back into DC
 
 
+Log-in to DC-1 
 
+- Note: If you don't know what VM you are loged into, go to command line and enter "hostname". The command line should either respond with DC-1 or Client-1. 
 
+If your server manager is not open then click the Windows Logo button and search for "server manager". 
 
+To install Active Directory, go on Server Manager and click "Add roles and features".
+
+Click "Next" for "Before You Begin", "Installation Type", and "Server Selection". 
+
+On Server Roles, allow "Active Directory Domain Services". Then click on "Add Features".
+
+Click "Next" for "Server Roles", "Features", and "AD DS". 
+
+Afterwards, click "Install" .
+
+- Note: After installing AD DS, it will not work properly until you setup your domain controller.
+
+You should see an exclamation mark located at the top left-corner. Click that, and click again on "Promote this server to a domain contoller".
+
+Under Select the deployment operation, click "Add a new forest". 
+
+For Root domain name, use: mydomain.com
+
+- Note: You don't have to use "mydomain.com" as the root domain name. You can name it whatever you want.
+
+Click "Next" on "Deployment Configuration".
+
+On Domain Controller Options, create/confirm you password (Use: Password1).
+
+Click "Next" on "Domain Controller Options", "DNS Options", "Additional Options", 
 
 
