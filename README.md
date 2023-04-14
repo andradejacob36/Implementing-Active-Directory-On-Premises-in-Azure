@@ -188,7 +188,8 @@ Image Display of Step 2: 7D
 
 1. Log-in to DC-1 and install Active Directory Domain Services 
 2. Promote as a DC: Setup a new forest as mydomain.com
-3. Restart and then log back into DC
+3. Restart and then log back into DC-1 as user: mydomain.com\labuser
+4. Create organizational units inside of Active Directory
 
 
 Log-in to DC-1 
@@ -221,6 +222,19 @@ Click "Next" on "Deployment Configuration".
 
 On Domain Controller Options, create/confirm you password (Use: Password1).
 
-Click "Next" on "Domain Controller Options", "DNS Options", "Additional Options", 
+Click "Next" on "Domain Controller Options", "DNS Options", "Additional Options", "Paths", "Review Options", and "Prerequisites Check".
 
+On the Installation section, click "Install". 
+
+- Note: Your DC-1 (VM) will restart after the installation. If you get logged-out of your VM connect back to it.  
+
+Reminder, when you launch the Remote Desktop Connection. with the context  of the domain Make sure to log-in your credentials (Use Username: mydomain.com\labuser, Password: Your unique password). 
+
+To open Active Directory, click the Windows Logo and search "Active Directory Administrative Center". 
+
+Right-click on mydomain.com, click on "New" and "Organizational Unit".
+
+Create a folder by naming it "_EMPLOYEES" and click "Okay". 
+
+Do the same for "_ADMINS". Right-click on mydomain.com and click "Refresh".  
 
