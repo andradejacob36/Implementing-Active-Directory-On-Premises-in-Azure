@@ -256,3 +256,5 @@ Right-click on your created account and choose "Properties". Go to "Member Of" s
 Click "ADD". Under Enter the object names to select, type "domain" and click on "Check Names".
 
 Pick the "Domain Admins" group. Then click "OK", "Apply", and "OK". 
+
+36:00
