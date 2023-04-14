@@ -232,9 +232,27 @@ Reminder, when you launch the Remote Desktop Connection. with the context  of th
 
 To open Active Directory, click the Windows Logo and search "Active Directory Administrative Center". 
 
+<h2>Step 5: Create an Admin and Normal User Account in AD</h2>
+
+
 Right-click on mydomain.com, click on "New" and "Organizational Unit".
 
 Create a folder by naming it "_EMPLOYEES" and click "Okay". 
 
 Do the same for "_ADMINS". Right-click on mydomain.com and click "Refresh".  
 
+To create our own admin account, right-click on "_ADMINS" and click on "New" and "User".
+
+- Note: You can make up your own name/last name.
+
+I inputed the following information as First Name: Terminator, Last Name: 3000, Full Name: Terminator 3000, User logon name: Terminator_admin. Afterwards click "Next" 
+
+Create/Confirm your Password (Use your unique Password). Uncheck "User must change password at next logon", and check on "Password never expires".  
+
+-Note: Remember to keep your "User logon name" in your notepad, as you will need them later.
+
+Right-click on your created account and choose "Properties". Go to "Member Of" section.    
+
+Click "ADD". Under Enter the object names to select, type "domain" and click on "Check Names".
+
+Pick the "Domain Admins" group. Then click "OK", "Apply", and "OK". 
