@@ -241,27 +241,51 @@ Image Display of Step 2: 7D
 
 <h2>Step 5: Create an Admin and Normal User Account in AD</h2>
 
+1. In Active Directory Users & Computers(ADUC), create an Organizational Unit(OU) called "_EMPLOYEES".
 
-Right-click on mydomain.com, click on "New" and "Organizational Unit".
+    <ol type="a"> 
+      <li>Right-click on mydomain.com, click on "New" and "Organizational Unit".</li>
+      <li>Create a folder by naming it "_EMPLOYEES" and click "Okay".</li> 
+    </ol>
+ 
+2. Create a new OU named "_ADMINS".
+    <ol type="a"> 
+      <li>Do the same for "_ADMINS". Right-click on mydomain.com and click "Refresh".</li>
+      <li>To create our own admin account, right-click on "_ADMINS" and click on "New" and "User".</li> 
+    </ol>
 
-Create a folder by naming it "_EMPLOYEES" and click "Okay". 
+3. Create a new employee named "Jane Doe" (Same password) with the username of "Terminator_admin".
+     <ol type="a"> 
+      <li>I input the following information as First Name: Terminator, Last Name: 3000, Full Name: Terminator 3000, User logon name:                         Terminator_admin. Afterwards click "Next".</li>
+      <li>Create/Confirm your Password (Use your unique Password). Uncheck "User must change password at next logon", and check on "Password never           expires".</li> 
+    </ol>
+    
+- Note: You can make up your own name/last name. Remember to keep your "User logon name" in your notepad, as you will need them later.
 
-Do the same for "_ADMINS". Right-click on mydomain.com and click "Refresh".  
+4. Add jane_admin to the "Domain Admins" Security Group.
+     <ol type="a"> 
+      <li>Right-click on your created account and choose "Properties". Go to "Member Of" section.</li>
+      <li>Click "ADD". Under Enter the object names to select, type "domain" and click on "Check Names".</li> 
+      <li>Pick the "Domain Admins" group. Then click "OK", "Apply", and "OK".</li>     
+    </ol>
 
-To create our own admin account, right-click on "_ADMINS" and click on "New" and "User".
+5. Log-out/ close the connection to DC-1 and log back in as "mydomain.com\Terminator_admin".
+     <ol type="a"> 
+      <li>To determine which VM you are log into, go to command line and type the following: "whoami", it will show you your username. If it                  responds "mydomain\labuser" then log-out from it.</li>
+      <li>To initiate DC-1 (VM) from your Azure dashboard, copy "DC-1" Public IP Address and paste to Remote Desktop Connection.</li> 
+      <li>Instead of logging-in with labuser, log-in with username: mydomain.com\Terminator_admin and your unique password.</li>     
+      <li>To verify if you logged-in to the correct VM, go to command line and type "whoami". It must respond back as "mydomain\Terminator_admin         </li>     
+    </ol>
 
-- Note: You can make up your own name/last name.
+6. Log-in to Client-1 as the original local admin (use: labuser) & join it to the domain.
+    <ol type="a"> 
+      <li>Initiate Client-1 VM and </li>
+      <li>If your Client-1 (VM) is closed, then initiate it from your Azure VM.</li> 
+      <li>To verify the name of the VM, go to command line and type "hostname", it should respond as "Client-1".</li>     
+      <li>Right-click the Windows logo button and click "System".</li>     
+      <li>Under Related settings, click "Rename this PC (Advanced)".</li>  
+      <li>Click "Change", it is located besides "To rename this computer or change its domain or workgroup click Change".</li>  
+    </ol>
 
-I inputed the following information as First Name: Terminator, Last Name: 3000, Full Name: Terminator 3000, User logon name: Terminator_admin. Afterwards click "Next" 
+42:37
 
-Create/Confirm your Password (Use your unique Password). Uncheck "User must change password at next logon", and check on "Password never expires".  
-
--Note: Remember to keep your "User logon name" in your notepad, as you will need them later.
-
-Right-click on your created account and choose "Properties". Go to "Member Of" section.    
-
-Click "ADD". Under Enter the object names to select, type "domain" and click on "Check Names".
-
-Pick the "Domain Admins" group. Then click "OK", "Apply", and "OK". 
-
-36:00
