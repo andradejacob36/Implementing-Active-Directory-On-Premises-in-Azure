@@ -232,13 +232,6 @@ Image Display of Step 2: 7D
       <li>To open Active Directory, click the Windows Logo and search "Active Directory Administrative Center". </li> 
     </ol>
 
-
-
-
-
-
-
-
 <h2>Step 5: Create an Admin and Normal User Account in AD</h2>
 
 1. In Active Directory Users & Computers(ADUC), create an Organizational Unit(OU) called "_EMPLOYEES".
@@ -276,8 +269,10 @@ Image Display of Step 2: 7D
       <li>Instead of logging-in with labuser, log-in with username: mydomain.com\Terminator_admin and your unique password.</li>     
       <li>To verify if you logged-in to the correct VM, go to command line and type "whoami". It must respond back as "mydomain\Terminator_admin         </li>     
     </ol>
+    
+<h2>Step 6: Join Client-1 to your domain (mydomain.com)</h2>
 
-6. Log-in to Client-1 as the original local admin (use: labuser) & join it to the domain.
+1. Log-in to Client-1 as the original local admin (use: labuser) & join it to the domain.
     <ol type="a"> 
       <li>If your Client-1 (VM) is closed, then initiate it from your Azure VM.</li> 
       <li>To verify the name of the VM, go to command line and type "hostname", it should respond as "Client-1".</li>     
@@ -288,22 +283,38 @@ Image Display of Step 2: 7D
       <li>You will receive an error stating that "domain.com" could not be contacted.</li>
     </ol>
 
-7. From the Azure Portal, set Client-1's DNS settings to the DC's Private IP address.
+2. From the Azure Portal, set Client-1's DNS settings to the DC's Private IP address.
     <ol type="a"> 
       <li>Go back to Azure; Virtual Machines; DC-1. Under Settings, click on the "Networking" tab.</li> 
       <li>Look for your NIC Private IP and copy your private IP address.</li>     
-      <li>Repeat 7a for Client-1 (VM). Click your client's network interface.</li>     
+      <li>Repeat 2a for Client-1 (VM). Click your client's network interface.</li>     
       <li>Under Settings, click "DNS servers". Also, click "Custom" to paste DC-1's private IP address in "Add DNS server".</li>  
       <li>Make sure to save.</li>  
     </ol>
 
-8. From the Azure Portal, restart Client-1.
+3. From the Azure Portal, restart Client-1.
     <ol type="a"> 
       <li>Return to Azure; Virtual Machines; Client-1. Click the "Restart" button.</li> 
     </ol>
 
-9. Login to Client-1 as the original local admin (labuser) and join it to the domain (computer will restart).
+4. Login to Client-1 as the original local admin (labuser) and join it to the domain (computer will restart).
+    <ol type="a"> 
+      <li>Initiate remote connection with Client-1 (VM).</li>
+      <li>Login as labuser.</li>
+      <li>To check your username, hostname, & DNS settings, go to command line. Type "whoami", "hostname", & "ipconfig /all". If your command line           responds back with "client-1\labuser", "Client-1", "Edit". Then you are in the right VM.</li>
+      <li>Right-click the Windows logo button and choose Systems. Click on "Rename this PC (advanced).</li>
+      <li>Under Computer Name, hit "Change...". Click Domain and type "mydomain.com".</li>
+      <li>After clicking "OK". Enter the name & password that has permission to join the domain (Use: mydomain.com\Terminator_admin).</li>
+      <li>Afterwards your VM should restart.</li>
+    </ol>
 
+<h2>Set-up Remote Desktop for non-administrative users on Client-1</h2>
+1. Log into Client-1 as mydomain.com\jane_admin and open system properties
+    <ol type="a"> 
+      <li>Log-in as mydomain.com\Terminator_admin</li>
+      <li>Login as labuser.</li>
+    </ol>
 
-42:37
+52:00
+
 
