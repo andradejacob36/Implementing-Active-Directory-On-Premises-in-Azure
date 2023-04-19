@@ -279,13 +279,31 @@ Image Display of Step 2: 7D
 
 6. Log-in to Client-1 as the original local admin (use: labuser) & join it to the domain.
     <ol type="a"> 
-      <li>Initiate Client-1 VM and </li>
       <li>If your Client-1 (VM) is closed, then initiate it from your Azure VM.</li> 
       <li>To verify the name of the VM, go to command line and type "hostname", it should respond as "Client-1".</li>     
       <li>Right-click the Windows logo button and click "System".</li>     
       <li>Under Related settings, click "Rename this PC (Advanced)".</li>  
       <li>Click "Change", it is located besides "To rename this computer or change its domain or workgroup click Change".</li>  
+      <li>Click Domain and type "mydomain.com". Click "OK".</li>  
+      <li>You will receive an error stating that "domain.com" could not be contacted.</li>
     </ol>
+
+7. From the Azure Portal, set Client-1's DNS settings to the DC's Private IP address.
+    <ol type="a"> 
+      <li>Go back to Azure; Virtual Machines; DC-1. Under Settings, click on the "Networking" tab.</li> 
+      <li>Look for your NIC Private IP and copy your private IP address.</li>     
+      <li>Repeat 7a for Client-1 (VM). Click your client's network interface.</li>     
+      <li>Under Settings, click "DNS servers". Also, click "Custom" to paste DC-1's private IP address in "Add DNS server".</li>  
+      <li>Make sure to save.</li>  
+    </ol>
+
+8. From the Azure Portal, restart Client-1.
+    <ol type="a"> 
+      <li>Return to Azure; Virtual Machines; Client-1. Click the "Restart" button.</li> 
+    </ol>
+
+9. Login to Client-1 as the original local admin (labuser) and join it to the domain (computer will restart).
+
 
 42:37
 
