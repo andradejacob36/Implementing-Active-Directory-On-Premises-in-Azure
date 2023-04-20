@@ -308,7 +308,7 @@ Image Display of Step 2: 7D
       <li>Afterwards your VM should restart.</li>
     </ol>
 
-<h2>Set-up Remote Desktop for non-administrative users on Client-1</h2>
+<h2>Step 7: Set-up Remote Desktop for non-administrative users on Client-1</h2>
 1. Log into Client-1 as mydomain.com\jane_admin and open system properties
     <ol type="a"> 
       <li>Log-in as mydomain.com\Terminator_admin</li>
@@ -332,7 +332,7 @@ Image Display of Step 2: 7D
     
 4. You can now log into Client-1 as a normal, non-administrative user now
 
-<h2>Create a bunch of additional users and attempt to log into client-1 with one of the users</h2>
+<h2>Step 8: Create a bunch of additional users and attempt to log into client-1 with one of the users</h2>
 
 1. Login to DC-1 as Terminator_admin.
     <ol type="a"> 
@@ -342,26 +342,47 @@ Image Display of Step 2: 7D
 
 2. Open PowerShell_ise as an administrator.
     <ol type="a"> 
-      <li>On your DC-1 (VM) click the Windows Logo and search for "Windows                     PowerShell ISE". Right-click it and choose "Run as administrator".</li>
+      <li>On your DC-1 (VM) click the Windows Logo and search for "Windows PowerShell ISE". Right-click it and choose "Run as administrator".</li>
     </ol>
 
 3. Create a new File and paste the contents of the script into it.
     <ol type="a"> 
-      <li>Click the link:                                                 
-          https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-             Users.ps1 </li>
-      <li>Then copy the entire code. Go back to PowerShell ISE, open a new file and           paste the content of the script.</li>
-      <li>Delete the following code 47 & 48.</li>
+      <li>Click the link: https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1</li>
+      <li>Then copy the entire code. Go back to PowerShell ISE, open a new file and paste the content of the script.</li>
+      <li>Delete the following code line 47 & 48.</li>
     </ol>
+
+- Note: This script will create 10,000 account users and they all will have the same password as "Password1". You will also notice that all the created accounts will be hosted under the "_EMPLOYEES" folder. Also these code will also randomize names.
 
 4. Run the script and observe the accounts being created.
     <ol type="a"> 
       <li>Click the "Run Script" button.</li>
-      <li>Go back to "Active Directory Users and Computers" panel and right-click "_EMPLOYEES". Then click "Refresh". You should see the created accounts.</li>
-      <li>Double a random account</li>
-
     </ol>
-    
-- Note: This script will create 10,000 account users and they all will have the same password as "Password1". You will also notice that all the created accounts will be hosted under the "_EMPLOYEES" folder. Also these code will also randomize names.
 
+5. When finished, open ADUC and observe the accounts in the appropriate OU.
+    <ol type="a"> 
+      <li>Go back to "Active Directory Users and Computers" panel and right-click "_EMPLOYEES". Then click "Refresh". You should see the created             accounts.</li>
+    </ol>
 
-1:01:21
+6. Attempt to log into Client-1 with one of the accounts (take note of the password in the script).
+    <ol type="a"> 
+      <li>Double-click a random account and under Account copy the employee's user logon name:</li>
+      <li>Minimize DC-1 (VM) and go to Client-1 (VM).</li>
+      <li>Log-out from Client-1 (VM). </li>
+      <li>Sign-in to Client-1 (VM) with the employee's user logon name and use password as Password1.</li>
+      <li>Open commmand-line and type "whoami" & "hostname"</li>
+      <li>It should respond back with "mydomain\employee's user name" and "Client-1". </li>
+    </ol>
+
+7. Lock/unlock the employee's account.
+    <ol type="a"> 
+      <li>Use the same random username you created.</li>
+      <li>Log-out from Client-1 (VM).</li>
+      <li>Afterwards attempt to log-in backto Client-1 but make sure to use the wrong password 10 times so the system can lock the account.</li>
+      <li>Go back to DC-1 and right-click the employee's username. Choose "Properties".</li>
+      <li>Under Account, click the check-box "Unlock account". At the bottom click "Okay".</li>
+      <li>You should be able to log-in if you input the correct password.</li>
+      <li>If the user forgot the password, go back to DC-1 (Vm), right-click it, and click on "Reset Password" to create a new password for the               user.</li>
+    </ol>
+
+   
