@@ -315,6 +315,35 @@ Image Display of Step 2: 7D
       <li>Login as labuser.</li>
     </ol>
 
-52:00
+2. Click “Remote Desktop”
+    <ol type="a"> 
+      <li>Right-click the Windows Logo and click on "System"</li>
+      <li>Click "Remote Desktop"</li>
+    </ol>
+
+3. Allow “domain users” access to remote desktop
+    <ol type="a"> 
+      <li>Under User Accounts, click "Select users that can remotely access this               PC.</li>
+      <li>Click "Add". Under "Enter the object names to select", type "domain users"           and click "Check Names". Then proceed by clicking "Okay". </li>
+      <li>Click "Okay" again.</li>
+      <li>Log back to DC-1 (VM). Click the Windows Logo and search for "Active                 Directory Users and Computers. Once you open it, expand the panel.</li>
+      <li>Click mydomain.com; "Users". Find "Domain Users". Double-click it. Under             Members, you can observe the following users to have access to Client-1.            </li>
+    </ol>
+    
+4. You can now log into Client-1 as a normal, non-administrative user now
+
+<h2>Create a bunch of additional users and attempt to log into client-1 with one of the users</h2>
+
+1. Login to DC-1 as Terminator_admin
+    <ol type="a"> 
+      <li>To verify your VM, go to command line and type "whoami", & "hostname", </li>
+      <li></li>
+    </ol>
+
+
+
+2. Open PowerShell_ise as an administrator
+3. 
+
 
 
