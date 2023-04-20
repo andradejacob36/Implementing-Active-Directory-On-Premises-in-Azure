@@ -334,16 +334,33 @@ Image Display of Step 2: 7D
 
 <h2>Create a bunch of additional users and attempt to log into client-1 with one of the users</h2>
 
-1. Login to DC-1 as Terminator_admin
+1. Login to DC-1 as Terminator_admin.
     <ol type="a"> 
-      <li>To verify your VM, go to command line and type "whoami", & "hostname", </li>
-      <li></li>
+      <li>To verify your VM, go to command line and type "whoami", & "hostname"</li>
+      <li>It shoud respond back with "mydomain\Terminator_admin" & "DC-1".</li>
     </ol>
 
+2. Open PowerShell_ise as an administrator.
+    <ol type="a"> 
+      <li>On your DC-1 (VM) click the Windows Logo and search for "Windows                     PowerShell ISE". Right-click it and choose "Run as administrator".</li>
+    </ol>
 
+3. Create a new File and paste the contents of the script into it.
+    <ol type="a"> 
+      <li>Click the link:                                                 
+          https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-             Users.ps1 </li>
+      <li>Then copy the entire code. Go back to PowerShell ISE, open a new file and           paste the content of the script.</li>
+      <li>Delete the following code 47 & 48.</li>
+    </ol>
 
-2. Open PowerShell_ise as an administrator
-3. 
+4. Run the script and observe the accounts being created.
+    <ol type="a"> 
+      <li>Click the "Run Script" button.</li>
+      <li>Go back to "Active Directory Users and Computers" panel and right-click "_EMPLOYEES". Then click "Refresh". You should see the created accounts.</li>
+      <li>Double a random account</li>
 
+    </ol>
+    
+- Note: This script will create 10,000 account users and they all will have the same password as "Password1". You will also notice that all the created accounts will be hosted under the "_EMPLOYEES" folder. Also these code will also randomize names.
 
 
