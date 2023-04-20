@@ -37,7 +37,6 @@ This tutorial is a step-by-step guide that provides instructions on how to creat
 
 
 <h2>Step 2: Setup Resources in Azure</h2>
-
 1. Create the Domain Controller VM (Windows Server 2022) named “DC-1”
   <ol type="a">
       <li>Click on the search bar and type "Virtual Machines".</li>
