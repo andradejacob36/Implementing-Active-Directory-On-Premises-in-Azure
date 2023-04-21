@@ -30,14 +30,15 @@ This tutorial is a step-by-step guide that provides instructions on how to creat
 
 <h2>Step 1: You need to authenticate and authorize yourself by logging into the Azure portal</h2>
 
-1. Go to the Azure Portal website (https://portal.azure.com/) and sign-in with your Azure account credentials. 
+1.Go to the Azure Portal website (https://portal.azure.com/) and sign-in with your Azure account credentials. 
+
+2.Once you have successfully logged-in, you will be redirected to the Azure portal dashboard where you can create and manage your resources. 
+
 - Note: If you do not have an Azure account, you will need to sign up for one before you can log-in.
 
-2. Once you have successfully logged-in, you will be redirected to the Azure portal dashboard where you can create and manage your resources. 
-
-
 <h2>Step 2: Setup Resources in Azure</h2>
-1. Create the Domain Controller VM (Windows Server 2022) named “DC-1”
+
+1.Create the Domain Controller VM (Windows Server 2022) named “DC-1”.
   <ol type="a">
       <li>Click on the search bar and type "Virtual Machines".</li>
       <li>Click on the "+ Create" button located on the top left-corner by "Switch to classic".</li>
@@ -57,8 +58,9 @@ This tutorial is a step-by-step guide that provides instructions on how to creat
 
 - Note: Remember to keep your username and password you created in your notepad, as you will need them later. Also, verify that your information is correct! Once the process is complete, we will have successfully deployed the Domain Controller VM, which will act as the dedicated server for our Active Directory.
 
+Image Display for Step 2: 1N
 <p>
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/3vLXclp.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
        
