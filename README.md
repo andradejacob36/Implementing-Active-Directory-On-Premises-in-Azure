@@ -64,7 +64,7 @@ Image Display for Step 2: 1N
 </p>
 <p>
        
-2. Set Domain Controller’s NIC Private IP address to be static
+2.Set Domain Controller’s NIC Private IP address to be static
     <ol type="a">
       <li>On the search bar, type "Virtual Machines".</li>
       <li>Click the blue link "DC-1" located under "Name".</li>
@@ -76,19 +76,30 @@ Image Display for Step 2: 1N
 
 - Note: Changing the IP address assignment method from dynamic to static ensures that the IP address remains fixed and does not change over time.
 
-Image Display of Step 2: 7C
+Image Display of Step 2: 2B-C
 <p>
-<img src="" height="80%" width="80%"/>
+<img src="https://i.imgur.com/Yz8bvhG.png" height="80%" width="80%"/>
 </p>
 <p>  
 
-Image Display of Step 2: 7D
+Image Display of Step 2: 2D
 <p>
-<img src="" height="80%" width="80%"/>
+<img src="https://i.imgur.com/D8RApze.png" height="80%" width="80%"/>
 </p>
 <p>   
-    
-3. Create the Client VM (Windows 10) named “Client-1”. Use the same Resource Group and Vnet. 
+
+Image Display of Step 2: 2E-F
+<p>
+<img src="https://i.imgur.com/JgvvZTZ.png" height="80%" width="80%"/>
+</p>
+<p>   
+  
+  
+  
+  
+  
+  
+3.Create the Client VM (Windows 10) named “Client-1”. Use the same Resource Group and Vnet. 
     <ol type="a">
       <li>Click on the search bar and type "Virtual Machines".</li>
       <li>Click on the "+ Create" button located on the top left-corner by "Switch to classic".</li>
