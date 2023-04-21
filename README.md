@@ -93,19 +93,14 @@ Image Display of Step 2: 2E-F
 <img src="https://i.imgur.com/JgvvZTZ.png" height="80%" width="80%"/>
 </p>
 <p>   
-  
-  
-  
-  
-  
-  
+   
 3.Create the Client VM (Windows 10) named “Client-1”. Use the same Resource Group and Vnet. 
     <ol type="a">
       <li>Click on the search bar and type "Virtual Machines".</li>
       <li>Click on the "+ Create" button located on the top left-corner by "Switch to classic".</li>
       <li>Choose the option "Azure virtual machine".</li>
       <li>Choose your subscription (For Ex: Azure Subscription 1).</li>
-      <li>Create a new name for the resource group (Use: AD-Lab).</li>
+      <li>Create a name for the resource group (Use: AD-Lab).</li>
       <li>Enter a unique name for the virtual machine (Use: Client-1).</li>
       <li>For "Region" use: (US) West US 3.</li>
       <li>For "Image" use: - Windows 10 Pro, version 21H2 (free services eligible).</li>
@@ -118,17 +113,23 @@ Image Display of Step 2: 2E-F
     </ol>    
     
 <p>
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/dHrRnV9.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>    
         
-4. Ensure that both VMs are in the same Vnet.
+4.Ensure that both VMs are in the same Vnet.
     <ol type="a">
       <li>To confirm that both VMs are located in the same region/virtual network, in the search bar type "Virtual Machines".</li>
       <li>Open both "DC-1" and "Client-1" by clicking the blue link located under "Name".</li>
       <li>Under Essentials, verify both VMs have the same "Virtual Network/subnet".</li>
     </ol>
 
+Image Display for Step 2: 4C
+<p>
+<img src="https://i.imgur.com/eICyJny.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>  
+  
 <h2>Step 3: Ensure Connectivity between the client and Domain Controller</h2>
 
 1. Log-in to Client-1 (VM) and ping DC-1's Private IP address with ping -t (perpetual ping). 
