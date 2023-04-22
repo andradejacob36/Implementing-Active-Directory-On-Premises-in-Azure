@@ -143,11 +143,11 @@ Image Display of Step 2: 4C
       <li>Then choose the following options for "Choose privacy settings for your device": </li>
       <li>Location: No, Diagnostic Data: No, Tailored experiences: No, Find my device: No, Inking and Typing: No, & Advertising ID: No.</li>
       <li>Click "Accept".</li>
-      <li>Return to Azure to find DC-1 Private IP address and copy it.</li>
-      <li>Go back to your VM in order to ping the private IP address of DC-1.</li>
-      <li>Navigate to the bottom-left corner and click on the "Start" button (Windows logo), then search for "Command Line" and open it.</li>
-      <li>On the Command Line type "ping -t DC-1 Private IP Address.</li>
-      <li>The Command Line should display "Request Time Out" as a response, which could be attributed to the Windows Firewall settings of DC-1               blocking the incoming ping requests.</li>
+      <li>Return to Azure (VM). Under Properties, copy DC-1's Private IP address.</li>
+      <li>To ping the Private IP address of DC-1 within Client-1 (VM), go back to Client-1 (VM).</li>
+      <li>After returning to Client-1 (VM), click on the "Start" button (Windows logo), then search for "Command Line" and open it.</li>
+      <li>On the Command Line, type "ping -t DC-1 Private IP Address.</li>
+      <li>The command line should display "Request Time Out" as a response, which could be attributed to the Windows Firewall settings of DC-1               blocking the incoming ping requests.</li>
     </ol>
 
 Image Display of Step 3: 1A-C
