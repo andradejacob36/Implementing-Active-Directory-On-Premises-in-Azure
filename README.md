@@ -58,7 +58,7 @@ This tutorial is a step-by-step guide that provides instructions on how to creat
 
 - Note: Remember to keep your username and password you created in your notepad, as you will need them later. Also, verify that your information is correct! Once the process is complete, we will have successfully deployed the Domain Controller VM, which will act as the dedicated server for our Active Directory.
 
-Image Display for Step 2: 1N
+Image Display of Step 2: 1N
 <p>
 <img src="https://i.imgur.com/3vLXclp.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
@@ -124,7 +124,7 @@ Image Display of Step 2: 2E-F
       <li>Under Essentials, verify both VMs have the same "Virtual Network/subnet".</li>
     </ol>
 
-Image Display for Step 2: 4C
+Image Display of Step 2: 4C
 <p>
 <img src="https://i.imgur.com/eICyJny.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
@@ -141,7 +141,7 @@ Image Display for Step 2: 4C
       <li>For Windows users click "Yes" to connect to your VM. Observe the following display.</li>
       <li>Wait until your virtual machine logs you in.</li>
       <li>Then choose the following options for "Choose privacy settings for your device": </li>
-      <li>Location: No, Diagnostic Data: No, Tailored experiences: No, Find my device: No, Inking and Typing: No, & Advertising ID: No </li>
+      <li>Location: No, Diagnostic Data: No, Tailored experiences: No, Find my device: No, Inking and Typing: No, & Advertising ID: No.</li>
       <li>Click "Accept".</li>
       <li>Return to Azure to find DC-1 Private IP address and copy it.</li>
       <li>Go back to your VM in order to ping the private IP address of DC-1.</li>
@@ -149,17 +149,32 @@ Image Display for Step 2: 4C
       <li>On the Command Line type "ping -t DC-1 Private IP Address.</li>
       <li>The Command Line should display "Request Time Out" as a response, which could be attributed to the Windows Firewall settings of DC-1               blocking the incoming ping requests.</li>
     </ol>
-     
- <p>
-<img src="https://i.imgur.com/So0Dn0n.png" height="80%" width="80%"/>
+
+Image Display of Step 3: 1A-C
+<p>
+<img src="https://i.imgur.com/iuqpEqv.png" height="80%" width="80%"/>
 </p>
 <p>  
  
+Image Display of Step 3: 1D
 <p>
-<img src="https://i.imgur.com/xHG3t9h.png" height="80%" width="80%"/>
+<img src="https://i.imgur.com/iIvgaPu.png" height="80%" width="80%"/>
 </p>
 <p>  
 
+Image Display of Step 3: 1
+<p>
+<img src="" height="80%" width="80%"/>
+</p>
+<p>    
+ 
+Image Display of Step 3: 1
+<p>
+<img src="" height="80%" width="80%"/>
+</p>
+<p>    
+  
+  
 2. Login to the Domain Controller and enable ICMPv4 in on the local windows Firewall.
     <ol type="a">
       <li>While DC-1 keeps blocking incoming ping request, switch back to your Azure dashboard and initiate "DC-1" VM.</li> 
