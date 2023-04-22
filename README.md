@@ -132,22 +132,16 @@ Image Display for Step 2: 4C
   
 <h2>Step 3: Ensure Connectivity between the client and Domain Controller</h2>
 
-1. Log-in to Client-1 (VM) and ping DC-1's Private IP address with ping -t (perpetual ping). 
-
-    <ol type="a">
+1.Log-in to Client-1 (VM) and ping DC-1's Private IP address with ping -t (perpetual ping). 
+  <ol type="a">
       <li>Under Essentials, copy Client-1 Public IP address.</li>
       <li>Click on the "Start" button (Windows logo), then search for "Remote Desktop Connection" and open it. For Mac users download the app                 "Microsoft Remote Desktop" from the App Store.</li>
-      <li>Paste the Public IP address(from your VM) in the computer name field and click "Connect". For Mac users paste the IP Address on "PC-name"           and click "add".</li>
+      <li>Paste the Public IP address (from your VM) in the computer name field and click "Connect". For Mac users paste the IP Address on "PC-               name" and click "add".</li>
       <li>Afterwards, make sure to log-in your credentials from Step 2 (Use Username: labuser/Password: Your unique password).</li>
       <li>For Windows users click "Yes" to connect to your VM. Observe the following display.</li>
       <li>Wait until your virtual machine logs you in.</li>
       <li>Then choose the following options for "Choose privacy settings for your device": </li>
-      <li>Location: No </li>
-      <li>Diagnostic Data: No</li>
-      <li>Tailored experiences: No</li>
-      <li>Find my device: No</li>
-      <li>Inking and Typing: No</li>
-      <li>Advertising ID: No</li>   
+      <li>Location: No, Diagnostic Data: No, Tailored experiences: No, Find my device: No, Inking and Typing: No, & Advertising ID: No </li>
       <li>Click "Accept".</li>
       <li>Return to Azure to find DC-1 Private IP address and copy it.</li>
       <li>Go back to your VM in order to ping the private IP address of DC-1.</li>
