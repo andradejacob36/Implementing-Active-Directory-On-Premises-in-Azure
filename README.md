@@ -161,20 +161,19 @@ Image Display of Step 3: 1D
 <img src="https://i.imgur.com/iIvgaPu.png" height="80%" width="80%"/>
 </p>
 <p>  
-
-Image Display of Step 3: 1
-<p>
-<img src="" height="80%" width="80%"/>
-</p>
-<p>    
  
-Image Display of Step 3: 1
+Image Display of Step 3: 1J
 <p>
-<img src="" height="80%" width="80%"/>
+<img src="https://i.imgur.com/dUPYiQp.png " height="80%" width="80%"/>
+</p>
+<p>  
+    
+Image Display of Step 3: 1L-M
+<p>
+<img src="https://i.imgur.com/EtXXIza.png" height="80%" width="80%"/>
 </p>
 <p>    
-  
-  
+   
 2. Login to the Domain Controller and enable ICMPv4 in on the local windows Firewall.
     <ol type="a">
       <li>While DC-1 keeps blocking incoming ping request, switch back to your Azure dashboard and initiate "DC-1" VM.</li> 
@@ -195,12 +194,7 @@ Image Display of Step 3: 1
     <ol type="a"> 
       <li>After minimizing the DC-1 VM, return to the Client-1 VM. You will observe that the command line on Client-1 VM responds with "Reply from           ...". This is possible because we have enabled ICMPv4 communication from the DC-1 VM, allowing for the successful reply.</li> 
       <li>Stop the ping from happening by holding CTRL + C.</li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li> 
-      <li></li> 
-      <li></li>
+
     </ol>
 
 <h2>Step 4: Install Active Directory</h2>
