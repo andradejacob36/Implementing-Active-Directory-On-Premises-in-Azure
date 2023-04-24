@@ -232,13 +232,35 @@ Image Display of Step 3: 2G-I
       <li>Click "Next" on "Domain Controller Options", "DNS Options", "Additional Options", "Paths", "Review Options", and "Prerequisites Check".</li>
       <li>On the Installation section, click "Install".</li>
       <li>Reminder, when you launch the Remote Desktop Connection. with the context of the domain Make sure to log-in your credentials (Use Username:                             mydomain.com\labuser, Password: Your unique password).</li>
-      <li>To open Active Directory, click the Windows Logo and search "Active Directory Administrative Center". </li> 
     </ol>
 
-- Note: If you don't know what VM you are loged into, go to command line and enter "hostname". The command line should either respond with DC-1 or Client-1. After installing AD DS, it will not work properly until you setup your domain controller. You don't have to use "mydomain.com" as the root domain name. You can name it whatever you want. Your DC-1 (VM) will restart after the installation. If you get logged-out of your VM connect back to it.  
+- Note: If you don't know what VM you are logged into, go to command line and enter "hostname". The command line should respond with "DC-1". After installing AD DS, it will not work properly until you setup your domain controller. You don't have to use "mydomain.com" as the root domain name. You can name it whatever you want. Your DC-1 (VM) will restart after the installation. If you get logged-out of your VM then log back to it.  
 
-2. Promote as a DC: Setup a new forest as mydomain.com
+Image Display of Step 4: 1C
+<p>
+<img src="https://i.imgur.com/ChRcUMb.png" height="80%" width="80%"/>
+</p>
+<p>
 
+Image Display of Step 4: 1E
+<p>
+<img src="https://i.imgur.com/HdHHk3W.png" height="80%" width="80%"/>
+</p>
+<p>
+
+Image Display of Step 4: 1H
+<p>
+<img src="https://i.imgur.com/ma6GjTQ.png" height="80%" width="80%"/>
+</p>
+<p>
+  
+Image Display of Step 4: 1I
+<p>
+<img src="https://i.imgur.com/ZYIIRe5.png" height="80%" width="80%"/>
+</p>
+<p>
+    
+2.Promote as a DC: Setup a new forest as mydomain.com
     <ol type="a"> 
       <li>Under Select the deployment operation, click "Add a new forest".</li>
       <li>For Root domain name, use: mydomain.com </li> 
@@ -247,24 +269,23 @@ Image Display of Step 3: 2G-I
       <li>Click "Next" on "Domain Controller Options", "DNS Options", "Additional Options", "Paths", "Review Options", and "Prerequisites Check".
           </li>
       <li>On the Installation section, click "Install".</li>
-      <li>Reminder, when you launch the Remote Desktop Connection. with the context of the domain Make sure to log-in your credentials (Use                   Username: mydomain.com\labuser, Password: Your unique password).</li>
-      <li>To open Active Directory, click the Windows Logo and search "Active Directory Administrative Center". </li> 
-      <li></li> 
-      <li></li>
+      <li>Reminder, when you launch the Remote Desktop Connection. with the context of the domain make sure to log-in your credentials (Use Username:                             mydomain.com\labuser, Password: Your unique password).</li>
     </ol>
     
-3. Restart and then log back into DC-1 as user: mydomain.com\labuser
+3.Restart and then log back into DC-1 as user: mydomain.com\labuser
 
-    <ol type="a"> 
-      <li>Reminder, when you launch the Remote Desktop Connection. with the context of the domain Make sure to log-in your credentials (Use                   Username: mydomain.com\labuser, Password: Your unique password).</li>
-      <li>To open Active Directory, click the Windows Logo and search "Active Directory Administrative Center". </li> 
-    </ol>
+
+
+
+
+
+
 
 <h2>Step 5: Create an Admin and Normal User Account in AD</h2>
 
-1. In Active Directory Users & Computers(ADUC), create an Organizational Unit(OU) called "_EMPLOYEES".
-
+1.In Active Directory Users & Computers(ADUC), create an Organizational Unit(OU) called "_EMPLOYEES".
     <ol type="a"> 
+     <li>  To open Active Directory, click the Windows Logo and search "Active Directory Administrative Center".</li>
       <li>Right-click on mydomain.com, click on "New" and "Organizational Unit".</li>
       <li>Create a folder by naming it "_EMPLOYEES" and click "Okay".</li> 
     </ol>
