@@ -201,7 +201,7 @@ Image Display of Step 3: 2G-I
 </p>
 <p> 
 
-3.Check back at Client-1 to see the ping succeed
+3.Check back at Client-1 to see the ping succeed.
     <ol type="a"> 
       <li>After minimizing the DC-1 VM, return to the Client-1 VM. You will observe that the command line on Client-1 VM responds with "Reply from 10.0.0.4". This is             possible because we have enabled ICMPv4 communication from the DC-1 VM, allowing for the successful reply.</li> 
       <li>Stop the ping from happening by holding CTRL + C.</li>
@@ -215,8 +215,7 @@ Image Display of Step 3: 2G-I
 
 <h2>Step 4: Install Active Directory</h2>
 
-1. Log-in to DC-1 and install Active Directory Domain Services 
-
+1.Log-in to DC-1 and install Active Directory Domain Services.
     <ol type="a"> 
       <li>Log-in to DC-1.</li>
       <li>If your server manager is not open then click the Windows Logo button and search for "server manager".</li>
@@ -225,18 +224,15 @@ Image Display of Step 3: 2G-I
       <li>On Server Roles, allow "Active Directory Domain Services". Then click on "Add Features".</li> 
       <li>Click "Next" for "Server Roles", "Features", and "AD DS".</li>
       <li>Afterwards, click "Install".</li>
-      <li>You should see an exclamation mark located at the top left-corner. Click that, and click again on "Promote this server to a domain                 controller".</li>
+      <li>You should see an exclamation mark located at the top left-corner. Click that, and click again on "Promote this server to a domain controller".</li>
       <li>Under Select the deployment operation, click "Add a new forest".</li>
       <li>For Root domain name, use: mydomain.com </li> 
       <li>Click "Next" on "Deployment Configuration".</li> 
       <li>On Domain Controller Options, create/confirm you password (Use: Password1).</li>
-      <li>Click "Next" on "Domain Controller Options", "DNS Options", "Additional Options", "Paths", "Review Options", and "Prerequisites Check".
-          </li>
+      <li>Click "Next" on "Domain Controller Options", "DNS Options", "Additional Options", "Paths", "Review Options", and "Prerequisites Check".</li>
       <li>On the Installation section, click "Install".</li>
-      <li>Reminder, when you launch the Remote Desktop Connection. with the context of the domain Make sure to log-in your credentials (Use                   Username: mydomain.com\labuser, Password: Your unique password).</li>
+      <li>Reminder, when you launch the Remote Desktop Connection. with the context of the domain Make sure to log-in your credentials (Use Username:                             mydomain.com\labuser, Password: Your unique password).</li>
       <li>To open Active Directory, click the Windows Logo and search "Active Directory Administrative Center". </li> 
-      <li></li> 
-      <li></li>
     </ol>
 
 - Note: If you don't know what VM you are loged into, go to command line and enter "hostname". The command line should either respond with DC-1 or Client-1. After installing AD DS, it will not work properly until you setup your domain controller. You don't have to use "mydomain.com" as the root domain name. You can name it whatever you want. Your DC-1 (VM) will restart after the installation. If you get logged-out of your VM connect back to it.  
