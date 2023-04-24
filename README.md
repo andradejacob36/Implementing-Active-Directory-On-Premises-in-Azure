@@ -174,7 +174,7 @@ Image Display of Step 3: 1L-M
 </p>
 <p>    
    
-2. Login to the Domain Controller and enable ICMPv4 in on the local windows Firewall.
+2.Login to the Domain Controller and enable ICMPv4 in on the local windows Firewall.
     <ol type="a">
       <li>While DC-1 keeps blocking incoming ping request, switch back to your Azure dashboard and initiate "DC-1" VM.</li> 
       <li>Under Essentials, copy DC-1 Public IP address.</li> 
@@ -184,18 +184,34 @@ Image Display of Step 3: 1L-M
       <li>On DC-1 (VM), navigate to the bottom-left corner and click on the Windows logo, then search for "wf.msc" and open it.</li>
       <li>Select "Inbound Rules" and expand the "Inbound Rules" panel for a better view.</li> 
       <li>Click on Protocol and find ICMPv4.</li> 
-      <li>To enable the "Core Networking Diagnostics - ICMP Echo Request (ICMPv4-In)" rule, right-click on it and select "Enable" for both the               "Private" and "Domain" profiles.</li>
+      <li>To enable the "Core Networking Diagnostics - ICMP Echo Request (ICMPv4-In)" rule, right-click on it and select "Enable" for both the "Private" and "Domain"             profiles.</li>
     </ol>
 
 - Note: Now you have two active Virtual Machines, Client-1 and DC-1. wf.msc stands for windows firewall. ICMP is used by the "ping" protocol. 
 
-3. Check back at Client-1 to see the ping succeed
+Image Display of Step 3: 2B-D
+<p>
+<img src="https://i.imgur.com/dJSI8G9.png" height="80%" width="80%"/>
+</p>
+<p>  
 
+Image Display of Step 3: 2G-I
+<p>
+<img src="https://i.imgur.com/Z0AdAGK.png" height="80%" width="80%"/>
+</p>
+<p> 
+
+3.Check back at Client-1 to see the ping succeed
     <ol type="a"> 
-      <li>After minimizing the DC-1 VM, return to the Client-1 VM. You will observe that the command line on Client-1 VM responds with "Reply from           ...". This is possible because we have enabled ICMPv4 communication from the DC-1 VM, allowing for the successful reply.</li> 
+      <li>After minimizing the DC-1 VM, return to the Client-1 VM. You will observe that the command line on Client-1 VM responds with "Reply from 10.0.0.4". This is             possible because we have enabled ICMPv4 communication from the DC-1 VM, allowing for the successful reply.</li> 
       <li>Stop the ping from happening by holding CTRL + C.</li>
-
     </ol>
+
+Image Display of Step 3: 2G-I
+<p>
+<img src="https://i.imgur.com/ycPdkfP.png" height="80%" width="80%"/>
+</p>
+<p>
 
 <h2>Step 4: Install Active Directory</h2>
 
