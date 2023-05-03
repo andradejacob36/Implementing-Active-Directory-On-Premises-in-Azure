@@ -449,6 +449,12 @@ Image Display of Step 6: 4E-F
   
   
   
+  
+  
+  
+  
+  
+  
 <h2>Step 7: Set-up Remote Desktop for non-administrative users on Client-1</h2>
 1. Log into Client-1 as mydomain.com\jane_admin and open system properties
     <ol type="a"> 
