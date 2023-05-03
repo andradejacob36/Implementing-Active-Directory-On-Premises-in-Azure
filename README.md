@@ -290,7 +290,6 @@ Image Display of Step 4: 1I
       <li>Click "ADD". Under Enter the object names to select, type "domain" and click on "Check Names".</li> 
       <li>Pick the "Domain Admins" group. Then click "OK", "Apply", and "OK".</li>     
     </ol>
-
 5.Log-out from DC-1 and log back in as "mydomain.com\Terminator_admin".
      <ol type="a"> 
       <li>To determine which VM you are log into, go to command line and type the following: "whoami", it will show you your username. If it responds "mydomain\labuser" then log-out from it.</li>
@@ -355,42 +354,101 @@ Image Display of Step 5: 5B
   
 <h2>Step 6: Join Client-1 to your domain (mydomain.com)</h2>
 
-1. Log-in to Client-1 as the original local admin (use: labuser) & join it to the domain.
+1.Log-in to Client-1 as the original local admin (use: labuser) & join it to the domain.
     <ol type="a"> 
       <li>If your Client-1 (VM) is closed, then initiate it from your Azure VM.</li> 
       <li>To verify the name of the VM, go to command line and type "hostname", it should respond as "Client-1".</li>     
       <li>Right-click the Windows logo button and click "System".</li>     
       <li>Under Related settings, click "Rename this PC (Advanced)".</li>  
-      <li>Click "Change", it is located besides "To rename this computer or change its domain or workgroup click Change".</li>  
+      <li>Under Computer Name, click "Change".</li>  
       <li>Click Domain and type "mydomain.com". Click "OK".</li>  
-      <li>You will receive an error stating that "domain.com" could not be contacted.</li>
+      <li>You will receive an error message stating that the "mydomain.com" could not be contacted.</li>
     </ol>
 
-2. From the Azure Portal, set Client-1's DNS settings to the DC's Private IP address.
+2.From the Azure Portal, set Client-1's DNS settings to the DC's Private IP address.
     <ol type="a"> 
       <li>Go back to Azure; Virtual Machines; DC-1. Under Settings, click on the "Networking" tab.</li> 
       <li>Look for your NIC Private IP and copy your private IP address.</li>     
-      <li>Repeat 2a for Client-1 (VM). Click your client's network interface.</li>     
-      <li>Under Settings, click "DNS servers". Also, click "Custom" to paste DC-1's private IP address in "Add DNS server".</li>  
+      <li>On Azure go to Client-1 (VM). On the Networking tab, click on Client-1's network interface.</li>     
+      <li>Under Settings, click "DNS servers". Also, click "Custom" and paste DC-1's private IP address in "Add DNS server".</li>  
       <li>Make sure to save.</li>  
     </ol>
 
-3. From the Azure Portal, restart Client-1.
+3.From the Azure Portal, restart Client-1.
     <ol type="a"> 
       <li>Return to Azure; Virtual Machines; Client-1. Click the "Restart" button.</li> 
     </ol>
 
-4. Login to Client-1 as the original local admin (labuser) and join it to the domain (computer will restart).
+4.Login to Client-1 as the original local admin (labuser) and join it to the domain (computer will restart).
     <ol type="a"> 
       <li>Initiate remote connection with Client-1 (VM).</li>
       <li>Login as labuser.</li>
-      <li>To check your username, hostname, & DNS settings, go to command line. Type "whoami", "hostname", & "ipconfig /all". If your command line           responds back with "client-1\labuser", "Client-1", "Edit". Then you are in the right VM.</li>
+      <li>To check your username, hostname, & DNS Server, go to command line and type the following as "whoami", "hostname", & "ipconfig /all". If your command line             responds back with "client-1\labuser", "Client-1", "Mine is (10.0.0.4)". Then you are in the right VM.</li>
       <li>Right-click the Windows logo button and choose Systems. Click on "Rename this PC (advanced).</li>
-      <li>Under Computer Name, hit "Change...". Click Domain and type "mydomain.com".</li>
-      <li>After clicking "OK". Enter the name & password that has permission to join the domain (Use: mydomain.com\Terminator_admin).</li>
-      <li>Afterwards your VM should restart.</li>
+      <li>Under Computer Name, click "Change...". Click Domain and type "mydomain.com".</li>
+      <li>After clicking "OK". Enter the name & password that has permission to join the domain (Use: mydomain.com\Terminator_admin. Password1).</li>
+      <li>Then your VM should restart.</li>
     </ol>
 
+Image Display of Step 6: 1B
+<p>
+<img src="https://i.imgur.com/kMvJ7YQ.png" height="80%" width="80%"/>
+</p>
+<p>
+
+Image Display of Step 6: 1C
+<p>
+<img src="https://i.imgur.com/aY01OwE.png" height="80%" width="80%"/>
+</p>
+<p>
+
+Image Display of Step 6: 1E-G
+<p>
+<img src="https://i.imgur.com/lXznhwP.png" height="80%" width="80%"/>
+</p>
+<p> 
+  
+Image Display of Step 6: 2A-B
+<p>
+<img src="https://i.imgur.com/8lQdbfW.png" height="80%" width="80%"/>
+</p>
+<p> 
+
+Image Display of Step 6: 2C
+<p>
+<img src="https://i.imgur.com/JL71I0D.png" height="80%" width="80%"/>
+</p>
+<p> 
+
+Image Display of Step 6: 2D
+<p>
+<img src="https://i.imgur.com/gtC0fM3.png" height="80%" width="80%"/>
+</p>
+<p> 
+
+Image Display of Step 6: 3A
+<p>
+<img src="https://i.imgur.com/yyxD6mQ.png" height="80%" width="80%"/>
+</p>
+<p> 
+
+Image Display of Step 6: 4C
+<p>
+<img src="https://i.imgur.com/aFslhUL.png" height="80%" width="80%"/>
+</p>
+<p> 
+  
+Image Display of Step 6: 4E-F
+<p>
+<img src="https://i.imgur.com/T4urdmy.png" height="80%" width="80%"/>
+</p>
+<p> 
+
+
+  
+  
+  
+  
 <h2>Step 7: Set-up Remote Desktop for non-administrative users on Client-1</h2>
 1. Log into Client-1 as mydomain.com\jane_admin and open system properties
     <ol type="a"> 
