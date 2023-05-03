@@ -456,15 +456,14 @@ Image Display of Step 6: 4E-F
   
   
 <h2>Step 7: Set-up Remote Desktop for non-administrative users on Client-1</h2>
-1. Log into Client-1 as mydomain.com\jane_admin and open system properties
+1. Log-in back to Client-1 (VM) as mydomain.com\Terminator_admin and open system properties
     <ol type="a"> 
-      <li>Log-in as mydomain.com\Terminator_admin</li>
-      <li>Login as labuser.</li>
+      <li>Log-in with username: mydomain.com\Terminator_admin and password: Password1</li>
     </ol>
 
-2. Click “Remote Desktop”
+2. On Client-1's (VM) click “Remote Desktop”
     <ol type="a"> 
-      <li>Right-click the Windows Logo and click on "System"</li>
+      <li>On Client-1's (VM), right-click the Windows Logo and click on "System".</li>
       <li>Click "Remote Desktop"</li>
     </ol>
 
