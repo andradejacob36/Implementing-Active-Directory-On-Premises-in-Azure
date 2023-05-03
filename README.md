@@ -117,7 +117,7 @@ Image Display of Step 2: 2E-F
 </p>
 <p>    
         
-4.Ensure that both VMs are in the same Vnet.
+4.Ensure that both VMs (DC-1 & Client-1) are in the same Vnet.
     <ol type="a">
       <li>To confirm that both VMs are located in the same region/virtual network, in the search bar type "Virtual Machines".</li>
       <li>Open both "DC-1" and "Client-1" by clicking the blue link located under "Name".</li>
@@ -134,7 +134,7 @@ Image Display of Step 2: 4C
 
 1.Log-in to Client-1 (VM) and ping DC-1's Private IP address with ping -t (perpetual ping). 
   <ol type="a">
-      <li>Under Essentials, copy Client-1 Public IP address.</li>
+      <li>Under Essentials, copy Client-1's Public IP address.</li>
       <li>Click on the "Start" button (Windows logo), then search for "Remote Desktop Connection" and open it. For Mac users download the app                 "Microsoft Remote Desktop" from the App Store.</li>
       <li>Paste the Public IP address (from your VM) in the computer name field and click "Connect". For Mac users paste the IP Address on "PC-               name" and click "add".</li>
       <li>Afterwards, make sure to log-in your credentials from Step 2 (Use Username: labuser/Password: Your unique password).</li>
@@ -146,8 +146,8 @@ Image Display of Step 2: 4C
       <li>Return to Azure (VM). Under Properties, copy DC-1's Private IP address.</li>
       <li>To ping the Private IP address of DC-1 within Client-1 (VM), go back to Client-1 (VM).</li>
       <li>After returning to Client-1 (VM), click on the "Start" button (Windows logo), then search for "Command Line" and open it.</li>
-      <li>On the Command Line, type "ping -t DC-1 Private IP Address.</li>
-      <li>The command line should display "Request Time Out" as a response, which could be attributed to the Windows Firewall settings of DC-1               blocking the incoming ping requests.</li>
+      <li>On the Command Line, type "ping -t DC-1 Private IP Address".</li>
+      <li>The command line should display "Request Time Out" as a response, which could be attributed to the Windows Firewall settings of DC-1 blocking the incoming             ping requests.</li>
     </ol>
 
 Image Display of Step 3: 1A-C
@@ -187,7 +187,7 @@ Image Display of Step 3: 1L-M
       <li>To enable the "Core Networking Diagnostics - ICMP Echo Request (ICMPv4-In)" rule, right-click on it and select "Enable" for both the "Private" and "Domain"             profiles.</li>
     </ol>
 
-- Note: Now you have two active Virtual Machines, Client-1 and DC-1. wf.msc stands for windows firewall. ICMP is used by the "ping" protocol. 
+- Note: wf.msc stands for windows firewall. Also, ICMP is used by the "ping" protocol. 
 
 Image Display of Step 3: 2B-D
 <p>
@@ -215,15 +215,15 @@ Image Display of Step 3: 2G-I
 
 <h2>Step 4: Install Active Directory</h2>
 
-1.Log-in to DC-1 and install Active Directory Domain Services.
+1.Log-in to DC-1 (VM) and install Active Directory Domain Services.
     <ol type="a"> 
       <li>Log-in to DC-1.</li>
       <li>If your server manager is not open then click the Windows Logo button and search for "server manager".</li>
       <li>To install Active Directory, go on Server Manager and click "Add roles and features".</li>
-      <li>Click "Next" for "Before You Begin", "Installation Type", and "Server Selection".</li> 
+      <li>Click "Next" on "Before You Begin", "Installation Type", and "Server Selection".</li> 
       <li>On Server Roles, allow "Active Directory Domain Services". Then click on "Add Features".</li> 
-      <li>Click "Next" for "Server Roles", "Features", and "AD DS".</li>
-      <li>Afterwards, click "Install".</li>
+      <li>Click "Next" on "Server Roles", "Features", and "AD DS".</li>
+      <li>Then, click "Install".</li>
       <li>You should see an exclamation mark located at the top left-corner. Click that, and click again on "Promote this server to a domain controller".</li>
       <li>Under Select the deployment operation, click "Add a new forest".</li>
       <li>For Root domain name, use: mydomain.com </li> 
@@ -231,7 +231,8 @@ Image Display of Step 3: 2G-I
       <li>On Domain Controller Options, create/confirm you password (Use: Password1).</li>
       <li>Click "Next" on "Domain Controller Options", "DNS Options", "Additional Options", "Paths", "Review Options", and "Prerequisites Check".</li>
       <li>On the Installation section, click "Install".</li>
-      <li>Reminder, when you launch the Remote Desktop Connection. with the context of the domain Make sure to log-in your credentials (Use Username:                             mydomain.com\labuser, Password: Your unique password).</li>
+      <li>Afterward, you will be automatically log-out of your DC-1 (VM).</li>
+      <li>Log-in back to DC-1 (VM).  When you launch the Remote Desktop Connection with the context of the domain, make sure to log-in your credentials (Use Username:           mydomain.com\labuser, Password: Your unique password).</li>
     </ol>
 
 - Note: If you don't know what VM you are logged into, go to command line and enter "hostname". The command line should respond with "DC-1". After installing AD DS, it will not work properly until you setup your domain controller. You don't have to use "mydomain.com" as the root domain name. You can name it whatever you want. Your DC-1 (VM) will restart after the installation. If you get logged-out of your VM then log back to it.  
@@ -260,27 +261,6 @@ Image Display of Step 4: 1I
 </p>
 <p>
     
-2.Promote as a DC: Setup a new forest as mydomain.com
-    <ol type="a"> 
-      <li>Under Select the deployment operation, click "Add a new forest".</li>
-      <li>For Root domain name, use: mydomain.com </li> 
-      <li>Click "Next" on "Deployment Configuration".</li> 
-      <li>On Domain Controller Options, create/confirm you password (Use: Password1).</li>
-      <li>Click "Next" on "Domain Controller Options", "DNS Options", "Additional Options", "Paths", "Review Options", and "Prerequisites Check".
-          </li>
-      <li>On the Installation section, click "Install".</li>
-      <li>Reminder, when you launch the Remote Desktop Connection. with the context of the domain make sure to log-in your credentials (Use Username:                             mydomain.com\labuser, Password: Your unique password).</li>
-    </ol>
-    
-3.Restart and then log back into DC-1 as user: mydomain.com\labuser
-
-
-
-
-
-
-
-
 <h2>Step 5: Create an Admin and Normal User Account in AD</h2>
 
 1.In Active Directory Users & Computers(ADUC), create an Organizational Unit(OU) called "_EMPLOYEES".
