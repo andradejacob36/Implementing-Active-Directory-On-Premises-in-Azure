@@ -60,7 +60,7 @@ This tutorial is a step-by-step guide that provides instructions on how to creat
 
 Image Display of Step 2: 1N
 <p>
-<img src="https://i.imgur.com/3vLXclp.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/JLOgMDj.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
        
@@ -78,19 +78,19 @@ Image Display of Step 2: 1N
 
 Image Display of Step 2: 2B-C
 <p>
-<img src="https://i.imgur.com/Yz8bvhG.png" height="80%" width="80%"/>
+<img src="https://i.imgur.com/a9rwjgf.png" height="80%" width="80%"/>
 </p>
 <p>  
 
 Image Display of Step 2: 2D
 <p>
-<img src="https://i.imgur.com/D8RApze.png" height="80%" width="80%"/>
+<img src="https://i.imgur.com/6xgww2Z.png" height="80%" width="80%"/>
 </p>
 <p>   
 
 Image Display of Step 2: 2E-F
 <p>
-<img src="https://i.imgur.com/JgvvZTZ.png" height="80%" width="80%"/>
+<img src="https://i.imgur.com/HaM3B6e.png" height="80%" width="80%"/>
 </p>
 <p>   
    
