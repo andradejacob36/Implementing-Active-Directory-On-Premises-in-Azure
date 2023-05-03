@@ -265,40 +265,94 @@ Image Display of Step 4: 1I
 
 1.In Active Directory Users & Computers(ADUC), create an Organizational Unit(OU) called "_EMPLOYEES".
     <ol type="a"> 
-     <li>  To open Active Directory, click the Windows Logo and search "Active Directory Administrative Center".</li>
+     <li>To open Active Directory, click the Windows Logo and search "Active Directory User and Computers".</li>
       <li>Right-click on mydomain.com, click on "New" and "Organizational Unit".</li>
       <li>Create a folder by naming it "_EMPLOYEES" and click "Okay".</li> 
     </ol>
  
-2. Create a new OU named "_ADMINS".
+2.Create a new OU named "_ADMINS".
     <ol type="a"> 
       <li>Do the same for "_ADMINS". Right-click on mydomain.com and click "Refresh".</li>
       <li>To create our own admin account, right-click on "_ADMINS" and click on "New" and "User".</li> 
     </ol>
 
-3. Create a new employee named "Jane Doe" (Same password) with the username of "Terminator_admin".
+3.Create a new employee named "Terminator 3000" (Same password) with the username of "Terminator_admin".
      <ol type="a"> 
-      <li>I input the following information as First Name: Terminator, Last Name: 3000, Full Name: Terminator 3000, User logon name:                         Terminator_admin. Afterwards click "Next".</li>
-      <li>Create/Confirm your Password (Use your unique Password). Uncheck "User must change password at next logon", and check on "Password never           expires".</li> 
+      <li>Input the following information as First Name: Terminator, Last Name: 3000, Full Name: Terminator 3000, User logon name: Terminator_admin. Click "Next".</li>
+      <li>Create/Confirm your Password (Use: Password1). Uncheck "User must change password at next logon", and check on "Password never expires". Click "Finish".</li> 
     </ol>
     
 - Note: You can make up your own name/last name. Remember to keep your "User logon name" in your notepad, as you will need them later.
 
-4. Add jane_admin to the "Domain Admins" Security Group.
+4.Add Terminator_admin to the "Domain Admins" Security Group.
      <ol type="a"> 
       <li>Right-click on your created account and choose "Properties". Go to "Member Of" section.</li>
       <li>Click "ADD". Under Enter the object names to select, type "domain" and click on "Check Names".</li> 
       <li>Pick the "Domain Admins" group. Then click "OK", "Apply", and "OK".</li>     
     </ol>
 
-5. Log-out/ close the connection to DC-1 and log back in as "mydomain.com\Terminator_admin".
+5.Log-out from DC-1 and log back in as "mydomain.com\Terminator_admin".
      <ol type="a"> 
-      <li>To determine which VM you are log into, go to command line and type the following: "whoami", it will show you your username. If it                  responds "mydomain\labuser" then log-out from it.</li>
+      <li>To determine which VM you are log into, go to command line and type the following: "whoami", it will show you your username. If it responds "mydomain\labuser" then log-out from it.</li>
       <li>To initiate DC-1 (VM) from your Azure dashboard, copy "DC-1" Public IP Address and paste to Remote Desktop Connection.</li> 
-      <li>Instead of logging-in with labuser, log-in with username: mydomain.com\Terminator_admin and your unique password.</li>     
-      <li>To verify if you logged-in to the correct VM, go to command line and type "whoami". It must respond back as "mydomain\Terminator_admin         </li>     
+      <li>Instead of logging-in with labuser, log-in with username: mydomain.com\Terminator_admin and use: Password1.</li>     
+      <li>To verify if you logged-in to the correct VM, go to command line and type "whoami". It must respond back as "mydomain\Terminator_admin</li>     
     </ol>
-    
+  
+Image Display of Step 5: 1C  
+<p>
+<img src="https://i.imgur.com/ERjX7VD.png" height="80%" width="80%"/>
+</p>
+<p>
+  
+Image Display of Step 5: 2A
+<p>
+<img src="https://i.imgur.com/8aDoCau.png" height="80%" width="80%"/>
+</p>
+<p>
+  
+Image Display of Step 5: 3A
+<p>
+<img src="https://i.imgur.com/QYOPwsQ.png" height="80%" width="80%"/>
+</p>
+<p>
+ 
+Image Display of Step 5: 3B
+<p>
+<img src="https://i.imgur.com/hKY2w6W.png" height="80%" width="80%"/>
+</p>
+<p>
+  
+Image Display of Step 5: 4A
+<p>
+<img src="https://i.imgur.com/DDd6cdw.png" height="80%" width="80%"/>
+</p>
+<p>
+
+Image Display of Step 5: 4A-B
+<p>
+<img src="https://i.imgur.com/4mqaxys.png" height="80%" width="80%"/>
+</p>
+<p>
+  
+Image Display of Step 5: 4B-C
+<p>
+<img src="https://i.imgur.com/taOWqgc.png" height="80%" width="80%"/>
+</p>
+<p>
+  
+Image Display of Step 5: 5A
+<p>
+<img src="https://i.imgur.com/tjLD2mo.png" height="80%" width="80%"/>
+</p>
+<p>
+
+Image Display of Step 5: 5B
+<p>
+<img src="https://i.imgur.com/obxAdkv.png" height="80%" width="80%"/>
+</p>
+<p>
+  
 <h2>Step 6: Join Client-1 to your domain (mydomain.com)</h2>
 
 1. Log-in to Client-1 as the original local admin (use: labuser) & join it to the domain.
