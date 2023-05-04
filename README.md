@@ -509,7 +509,7 @@ Image Display of Step 7: 3E
 1.Log-out from DC-1 (VM) and log-in back to DC-1 (VM) as username:Terminator_admin and pass:Password1.
     <ol type="a"> 
       <li>To verify your VM, go to command line and type "whoami", & "hostname"</li>
-      <li>It shoud respond back with "mydomain\terminator_admin" & "DC-1".</li>
+      <li>It should respond back with "mydomain\terminator_admin" & "DC-1".</li>
     </ol>
 
 2.Open PowerShell_ise as an administrator.
@@ -556,4 +556,51 @@ Image Display of Step 7: 3E
       <li>If the user forgot the password, go back to DC-1 (VM), right-click it, and click on "Reset Password" to create a new password for the user.</li>
     </ol>
 
+Image Display of Step 8: 1B
+<p>
+<img src="https://i.imgur.com/gtSFKcV.png" height="80%" width="80%"/>
+</p>
+<p>  
    
+Image Display of Step 8: 2A
+<p>
+<img src="https://i.imgur.com/KqCCMy4.png" height="80%" width="80%"/>
+</p>
+<p>  
+  
+Image Display of Step 8: 3B
+<p>
+<img src="https://i.imgur.com/6I8FmBx.png" height="80%" width="80%"/>
+</p>
+<p>  
+  
+Image Display of Step 8: 5A
+<p>
+<img src="https://i.imgur.com/3UPBpn9.png" height="80%" width="80%"/>
+</p>
+<p>  
+
+Image Display of Step 8: 6A
+<p>
+<img src="https://i.imgur.com/24LxZmC.png" height="80%" width="80%"/>
+</p>
+<p>  
+  
+Image Display of Step 8: 6F
+<p>
+<img src="https://i.imgur.com/O1bdLqo.png" height="80%" width="80%"/>
+</p>
+<p>  
+  
+Image Display of Step 8: 7E
+<p>
+<img src="https://i.imgur.com/mFSlNtF.png" height="80%" width="80%"/>
+</p>
+<p>  
+  
+Image Display of Step 8: 7G
+<p>
+<img src="https://i.imgur.com/TMaHS7X.png" height="80%" width="80%"/>
+</p>
+<p>  
+  
