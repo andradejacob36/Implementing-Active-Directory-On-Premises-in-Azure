@@ -443,92 +443,117 @@ Image Display of Step 6: 4E-F
 <img src="https://i.imgur.com/T4urdmy.png" height="80%" width="80%"/>
 </p>
 <p> 
-
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
 <h2>Step 7: Set-up Remote Desktop for non-administrative users on Client-1</h2>
-1. Log-in back to Client-1 (VM) as mydomain.com\Terminator_admin and open system properties
+
+1.Log-in back to Client-1 (VM) as mydomain.com\Terminator_admin and open system properties
     <ol type="a"> 
       <li>Log-in with username: mydomain.com\Terminator_admin and password: Password1</li>
     </ol>
 
-2. On Client-1's (VM) click “Remote Desktop”
+2.On Client-1's (VM) click “Remote Desktop”
     <ol type="a"> 
       <li>On Client-1's (VM), right-click the Windows Logo and click on "System".</li>
       <li>Click "Remote Desktop"</li>
     </ol>
 
-3. Allow “domain users” access to remote desktop
+3.Allow “domain users” access to remote desktop
     <ol type="a"> 
-      <li>Under User Accounts, click "Select users that can remotely access this PC.</li>
-      <li>Click "Add". Under "Enter the object names to select", type "domain users" and click "Check Names". Then proceed by clicking "Okay".           </li>
+      <li>Under User Accounts, click "Select users that can remotely access this PC".</li>
+      <li>Click "Add". Under "Enter the object names to select", type "domain users" and click "Check Names". Then proceed by clicking "Okay".</li>
       <li>Click "Okay" again.</li>
-      <li>Log back to DC-1 (VM). Click the Windows Logo and search for "Active Directory Users and Computers. Once you open it, expand the panel.         </li>
-      <li>Click mydomain.com; "Users". Find "Domain Users". Double-click it. Under Members, you can observe the following users to have access to             Client-1.</li>
+      <li>Log-in back to DC-1 (VM). Click the Windows Logo and search for "Active Directory Users and Computers. Once you open it, expand the panel.</li>
+      <li>Click mydomain.com; "Users". Find "Domain Users". Double-click it. Under Members, you can observe the following users to have access to  Client-1.</li>
     </ol>
+
+Image Display of Step 7: 2B
+<p>
+<img src="https://i.imgur.com/rZzkmCI.png" height="80%" width="80%"/>
+</p>
+<p> 
     
-4. You can now log into Client-1 as a normal, non-administrative user now
+Image Display of Step 7: 3A
+<p>
+<img src="https://i.imgur.com/Q9rx6qv.png" height="80%" width="80%"/>
+</p>
+<p>    
+
+Image Display of Step 7: 3B-C
+<p>
+<img src="https://i.imgur.com/74Iqpbr.png" height="80%" width="80%"/>
+</p>
+<p>  
+ 
+Image Display of Step 7: 3E
+<p>
+<img src="https://i.imgur.com/YSK4CV2.png" height="80%" width="80%"/>
+</p>
+<p>  
+
+Image Display of Step 7: 3E
+<p>
+<img src="https://i.imgur.com/WF7B6Hu.png" height="80%" width="80%"/>
+</p>
+<p>  
+    
+
+
+
+
+
+
+
 
 <h2>Step 8: Create a bunch of additional users and attempt to log into client-1 with one of the users</h2>
 
-1. Login to DC-1 as Terminator_admin.
+1. Log-out from DC-1 (VM) and log-in back to DC-1 (VM) as username:Terminator_admin and pass:Password1.
     <ol type="a"> 
       <li>To verify your VM, go to command line and type "whoami", & "hostname"</li>
-      <li>It shoud respond back with "mydomain\Terminator_admin" & "DC-1".</li>
+      <li>It shoud respond back with "mydomain\terminator_admin" & "DC-1".</li>
     </ol>
 
-2. Open PowerShell_ise as an administrator.
+2.Open PowerShell_ise as an administrator.
     <ol type="a"> 
-      <li>On your DC-1 (VM) click the Windows Logo and search for "Windows PowerShell ISE". Right-click it and choose "Run as administrator".</li>
+      <li>On your DC-1 (VM), click the Windows Logo and search for "Windows PowerShell ISE". Right-click it and choose "Run as administrator".</li>
     </ol>
 
-3. Create a new File and paste the contents of the script into it.
+3.Create a new File and paste the contents of the script into it.
     <ol type="a"> 
       <li>Click the link: https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1</li>
       <li>Then copy the entire code. Go back to PowerShell ISE, open a new file and paste the content of the script.</li>
-      <li>Delete the following code line 47 & 48.</li>
     </ol>
 
 - Note: This script will create 10,000 account users and they all will have the same password as "Password1". You will also notice that all the created accounts will be hosted under the "_EMPLOYEES" folder. Also these code will also randomize names.
 
-4. Run the script and observe the accounts being created.
+4.Run the script and observe the accounts being created.
     <ol type="a"> 
       <li>Click the "Run Script" button.</li>
     </ol>
 
-5. When finished, open ADUC and observe the accounts in the appropriate OU.
+5.When finished, open ADUC and observe the accounts in the appropriate OU.
     <ol type="a"> 
-      <li>Go back to "Active Directory Users and Computers" panel and right-click "_EMPLOYEES". Then click "Refresh". You should see the created             accounts.</li>
+      <li>Go back to "Active Directory Users and Computers" panel and right-click "_EMPLOYEES". Then click "Refresh". You should see the some of the created                     accounts.</li>
     </ol>
 
-6. Attempt to log into Client-1 with one of the accounts (take note of the password in the script).
+6.Attempt to log into Client-1 with one of the accounts (take note of the password in the script).
     <ol type="a"> 
-      <li>Double-click a random account and under Account copy the employee's user logon name:</li>
+      <li>Double-click a random account and under Account; copy the employee's user logon name.</li>
       <li>Minimize DC-1 (VM) and go to Client-1 (VM).</li>
-      <li>Log-out from Client-1 (VM). </li>
-      <li>Sign-in to Client-1 (VM) with the employee's user logon name and use password as Password1.</li>
-      <li>Open commmand-line and type "whoami" & "hostname"</li>
-      <li>It should respond back with "mydomain\employee's user name" and "Client-1". </li>
+      <li>Log-out from Client-1 (VM).</li>
+      <li>Log-in to Client-1 (VM) with the employee's user logon name (Mine is mydomain.com\baru.lap) and use password as Password1.</li>
+      <li>Open commmand-line and type "whoami" & "hostname".</li>
+      <li>It should respond back with your "mydomain\employee's username" and "Client-1".</li>
     </ol>
 
-7. Lock/unlock the employee's account.
+7.Lock/unlock the employee's account.
     <ol type="a"> 
-      <li>Use the same random username you created.</li>
+      <li>Use the same random employee's username (Mine is mydomain.com\baru.lap).</li>
       <li>Log-out from Client-1 (VM).</li>
-      <li>Afterwards attempt to log-in backto Client-1 but make sure to use the wrong password 10 times so the system can lock the account.</li>
-      <li>Go back to DC-1 and right-click the employee's username. Choose "Properties".</li>
-      <li>Under Account, click the check-box "Unlock account". At the bottom click "Okay".</li>
-      <li>You should be able to log-in if you input the correct password.</li>
-      <li>If the user forgot the password, go back to DC-1 (Vm), right-click it, and click on "Reset Password" to create a new password for the               user.</li>
+      <li>Afterward, attempt to log-in back to Client-1 with the same random employee's username, but make sure to use the wrong password 10 times so the system can             lock the account.</li>
+      <li>Go back to DC-1 (VM) and right-click the same random employee's username. Choose "Properties".</li>
+      <li>Under Account, click the check-box "Unlock account". Then, click "Okay".</li>
+      <li>You should be able to log-in your employee's username by inputting the correct password.</li>
+      <li>If the user forgot the password, go back to DC-1 (VM), right-click it, and click on "Reset Password" to create a new password for the user.</li>
     </ol>
 
    
