@@ -506,7 +506,7 @@ Image Display of Step 7: 3E
 
 <h2>Step 8: Create a bunch of additional users and attempt to log into client-1 with one of the users</h2>
 
-1. Log-out from DC-1 (VM) and log-in back to DC-1 (VM) as username:Terminator_admin and pass:Password1.
+1.Log-out from DC-1 (VM) and log-in back to DC-1 (VM) as username:Terminator_admin and pass:Password1.
     <ol type="a"> 
       <li>To verify your VM, go to command line and type "whoami", & "hostname"</li>
       <li>It shoud respond back with "mydomain\terminator_admin" & "DC-1".</li>
@@ -552,7 +552,7 @@ Image Display of Step 7: 3E
       <li>Afterward, attempt to log-in back to Client-1 with the same random employee's username, but make sure to use the wrong password 10 times so the system can             lock the account.</li>
       <li>Go back to DC-1 (VM) and right-click the same random employee's username. Choose "Properties".</li>
       <li>Under Account, click the check-box "Unlock account". Then, click "Okay".</li>
-      <li>You should be able to log-in your employee's username by inputting the correct password.</li>
+      <li>You should be able to log-in back to your employee's username by inputting the correct password.</li>
       <li>If the user forgot the password, go back to DC-1 (VM), right-click it, and click on "Reset Password" to create a new password for the user.</li>
     </ol>
 
